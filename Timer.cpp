@@ -1,7 +1,3 @@
-// 
-// 
-// 
-
 #include "Timer.h"
 
 Timer::Timer(unsigned long interval)
@@ -31,6 +27,11 @@ void Timer::Stop()
 	isStarted = false;
 }
 
+bool Timer::IsStarted()
+{
+	return isStarted;
+}
+
 bool Timer::TimePassed()
 {
 	if (isStarted)
@@ -41,7 +42,6 @@ bool Timer::TimePassed()
 		{
 			previousMillis = 0;
 		}
-
 
 		bool isPassed = currentMillis - previousMillis > interval;
 

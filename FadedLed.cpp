@@ -1,7 +1,3 @@
-// 
-// 
-// 
-
 #include "FadedLed.h"
 
 FadedLed::FadedLed(int pin, int fadeAmount)
@@ -10,39 +6,65 @@ FadedLed::FadedLed(int pin, int fadeAmount)
 	this->state = LOW;
 	this->brightness = 0;
 	this->fadeAmount = fadeAmount;
+	this->maxBrightness = 255;
+	isTimePassed = true;
 }
 
 void FadedLed::On()
 {
 	state = HIGH;
+	maxBrightness = 255;
 	timer.SetInterval(30);
 }
 
 void FadedLed::Off()
 {
 	state = LOW;
+	maxBrightness = 0;
 	timer.SetInterval(30);
+}
+
+void FadedLed::SetBrightness(byte bright)
+{
+	//timer.Stop();
+
+	this->maxBrightness = bright;
+	if (bright > 0)
+	{
+		state = HIGH;
+	}
+	else
+	{
+		state = LOW;
+	}
+
+	if (!timer.IsStarted())
+	{
+		timer.SetInterval(5);
+	}
 }
 
 void FadedLed::Loop()
 {
 	if (timer.TimePassed())
 	{
-		if (state == LOW)
+		Serial.println(brightness);
+
+		if (brightness > maxBrightness)
 		{
 			brightness -= fadeAmount;
-			if (brightness < 0)
+			if (brightness < maxBrightness)
 			{
-				brightness = 0;
+				brightness = maxBrightness;
 				timer.Stop();
 			}
 		}
 		else
 		{
 			brightness += fadeAmount;
-			if (brightness > 255)
+			if (brightness > maxBrightness)
 			{
-				brightness = 255;
+				brightness = maxBrightness;
 				timer.Stop();
 			}
 		}

@@ -22,6 +22,7 @@ class Timer
 	 void Start();
 	 void Stop();
 	 bool TimePassed();
+	 bool IsStarted();
 };
 
 

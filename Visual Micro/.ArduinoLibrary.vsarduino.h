@@ -48,6 +48,8 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\FadedLed.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\FadedLed.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\ISwitchable.h"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.cpp"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Timer.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Timer.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\led.cpp"

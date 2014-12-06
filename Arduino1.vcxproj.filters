@@ -24,9 +24,6 @@
     <ClInclude Include="led.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LedBlinker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BrightnessLed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -36,12 +33,24 @@
     <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Visual Micro\.ArduinoLibrary.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Blinker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ISwitchable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SensorHCSR04.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmoothBrightnessLed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="led.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LedBlinker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BrightnessLed.cpp">
@@ -51,6 +60,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blinker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SensorHCSR04.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmoothBrightnessLed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

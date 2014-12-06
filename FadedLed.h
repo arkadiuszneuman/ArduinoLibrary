@@ -21,10 +21,13 @@ private:
 	int state;
 	int brightness;
 	int fadeAmount;
+	byte maxBrightness;
+	bool isTimePassed;
 public:
 	FadedLed(int pin, int fadeAmount = 5);
 	void On();
 	void Off();
+	void SetBrightness(byte brightness);
 	void Loop();
 	int GetState();
 };
