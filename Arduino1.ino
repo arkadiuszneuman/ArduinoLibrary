@@ -2,9 +2,9 @@
 
 #include "Timer.h"
 #include "FadedLed.h"
-#include "LedBlinker.h"
+#include "Blinker.h"
 
-LedBlinker ledBlinker(11, 3000, 3000);
+Blinker ledBlinker(new Led(11), 1000, 1000);
 
 void setup() {
 

@@ -11,8 +11,9 @@
 
 #include "BrightnessLed.h"
 #include "Timer.h"
+#include "ISwitchable.h"
 
-class FadedLed
+class FadedLed : public ISwitchable
 {
 private:
 	BrightnessLed brightnessLed;
@@ -22,8 +23,8 @@ private:
 	int fadeAmount;
 public:
 	FadedLed(int pin, int fadeAmount = 5);
-	void LedOn();
-	void LedOff();
+	void On();
+	void Off();
 	void Loop();
 	int GetState();
 };

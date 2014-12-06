@@ -11,13 +11,13 @@ Led::Led(int pin)
 	this->state = LOW;
 }
 
-void Led::LedOn()
+void Led::On()
 {
 	digitalWrite(pin, HIGH);
 	state = HIGH;
 }
 
-void Led::LedOff()
+void Led::Off()
 {
 	digitalWrite(pin, LOW);
 	state = LOW;
@@ -26,5 +26,9 @@ void Led::LedOff()
 int Led::GetState()
 {
 	return state;
+}
+
+void Led::Loop()
+{
 }
 

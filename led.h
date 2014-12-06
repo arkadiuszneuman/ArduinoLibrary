@@ -9,16 +9,19 @@
 	#include "WProgram.h"
 #endif
 
-class Led
+#include "ISwitchable.h"
+
+class Led : public ISwitchable
 {
  private:
 	 int pin;
 	 int state;
  public:
 	 Led(int pin);
-	 void LedOn();
-	 void LedOff();
+	 void On();
+	 void Off();
 	 int GetState();
+	 void Loop();
 };
 
 #endif

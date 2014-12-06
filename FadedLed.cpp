@@ -12,13 +12,13 @@ FadedLed::FadedLed(int pin, int fadeAmount)
 	this->fadeAmount = fadeAmount;
 }
 
-void FadedLed::LedOn()
+void FadedLed::On()
 {
 	state = HIGH;
 	timer.SetInterval(30);
 }
 
-void FadedLed::LedOff()
+void FadedLed::Off()
 {
 	state = LOW;
 	timer.SetInterval(30);
