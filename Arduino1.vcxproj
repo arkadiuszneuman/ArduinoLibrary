@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino;D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard;D:\Program Files (x86)\Arduino\libraries;D:\Program Files (x86)\Arduino\hardware\arduino\libraries;D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\ArkadiuszN\Documents\Arduino\libraries;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\;d:\program files (x86)\arduino\hardware\tools\avr\avr\;d:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino;D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard;D:\Program Files (x86)\Arduino\libraries\Wire;D:\Program Files (x86)\Arduino\libraries\Wire\utility;D:\Program Files (x86)\Arduino\libraries;D:\Program Files (x86)\Arduino\hardware\arduino\libraries;D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\ArkadiuszN\Documents\Arduino\libraries;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\;d:\program files (x86)\arduino\hardware\tools\avr\avr\;d:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>D:\Praca\Projekty\Arduino\ArduinoLibrary\Visual Micro\.ArduinoLibrary.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;ARDUINO=106;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -75,23 +75,41 @@
   <ItemGroup>
     <ClInclude Include="BrightnessLed.h" />
     <ClInclude Include="FadedLed.h" />
+    <ClInclude Include="FastIO.h" />
+    <ClInclude Include="I2CIO.h" />
     <ClInclude Include="ISwitchable.h" />
+    <ClInclude Include="LCD.h" />
     <ClInclude Include="led.h" />
     <ClInclude Include="Blinker.h" />
+    <ClInclude Include="LiquidCrystal.h" />
+    <ClInclude Include="LiquidCrystal_I2C.h" />
+    <ClInclude Include="LiquidCrystal_SR.h" />
+    <ClInclude Include="LiquidCrystal_SR2W.h" />
+    <ClInclude Include="LiquidCrystal_SR3W.h" />
     <ClInclude Include="SensorHCSR04.h" />
-    <ClInclude Include="SmoothBrightnessLed.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Visual Micro\.Arduino1.vsarduino.h" />
     <ClInclude Include="Visual Micro\.ArduinoLibrary.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BrightnessLed.cpp" />
+    <ClCompile Include="DistanceLEDShower.backup" />
     <ClCompile Include="FadedLed.cpp" />
+    <ClCompile Include="FastIO.cpp" />
+    <ClCompile Include="I2CIO.cpp" />
+    <ClCompile Include="LCD.cpp" />
     <ClCompile Include="led.cpp" />
     <ClCompile Include="Blinker.cpp" />
+    <ClCompile Include="LiquidCrystal.cpp" />
+    <ClCompile Include="LiquidCrystal_I2C.cpp" />
+    <ClCompile Include="LiquidCrystal_SR.cpp" />
+    <ClCompile Include="LiquidCrystal_SR2W.cpp" />
+    <ClCompile Include="LiquidCrystal_SR3W.cpp" />
     <ClCompile Include="SensorHCSR04.cpp" />
-    <ClCompile Include="SmoothBrightnessLed.cpp" />
     <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LiquidCrystal\keywords.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

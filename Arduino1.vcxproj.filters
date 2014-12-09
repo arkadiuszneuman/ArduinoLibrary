@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="LiquidCrystal">
+      <UniqueIdentifier>{774ef6c9-54c6-45ac-a441-b038a0290af3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Arduino1.ino" />
@@ -45,7 +48,28 @@
     <ClInclude Include="SensorHCSR04.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SmoothBrightnessLed.h">
+    <ClInclude Include="FastIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I2CIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidCrystal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidCrystal_I2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidCrystal_SR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidCrystal_SR2W.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidCrystal_SR3W.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,8 +92,35 @@
     <ClCompile Include="SensorHCSR04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SmoothBrightnessLed.cpp">
+    <ClCompile Include="DistanceLEDShower.backup" />
+    <ClCompile Include="FastIO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="I2CIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidCrystal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidCrystal_I2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidCrystal_SR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidCrystal_SR2W.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidCrystal_SR3W.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LiquidCrystal\keywords.txt">
+      <Filter>LiquidCrystal</Filter>
+    </Text>
   </ItemGroup>
 </Project>
