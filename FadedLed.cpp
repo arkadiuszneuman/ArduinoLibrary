@@ -7,7 +7,6 @@ FadedLed::FadedLed(int pin, int fadeAmount)
 	this->brightness = 0;
 	this->fadeAmount = fadeAmount;
 	this->maxBrightness = 255;
-	isTimePassed = true;
 }
 
 void FadedLed::On()

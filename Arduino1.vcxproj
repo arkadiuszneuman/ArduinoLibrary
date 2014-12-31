@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino;D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard;D:\Program Files (x86)\Arduino\libraries\Wire;D:\Program Files (x86)\Arduino\libraries\Wire\utility;D:\Program Files (x86)\Arduino\libraries;D:\Program Files (x86)\Arduino\hardware\arduino\libraries;D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\ArkadiuszN\Documents\Arduino\libraries;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\;d:\program files (x86)\arduino\hardware\tools\avr\avr\;d:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino;D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard;D:\Program Files (x86)\Arduino\libraries\Wire;D:\Program Files (x86)\Arduino\libraries\Wire\utility;D:\Program Files (x86)\Arduino\libraries\Stepper;D:\Program Files (x86)\Arduino\libraries\Stepper\utility;D:\Program Files (x86)\Arduino\libraries;D:\Program Files (x86)\Arduino\hardware\arduino\libraries;D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\ArkadiuszN\Documents\Arduino\libraries;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\;d:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\;d:\program files (x86)\arduino\hardware\tools\avr\avr\;d:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>D:\Praca\Projekty\Arduino\ArduinoLibrary\Visual Micro\.ArduinoLibrary.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;ARDUINO=106;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -107,9 +107,6 @@
     <ClCompile Include="LiquidCrystal_SR3W.cpp" />
     <ClCompile Include="SensorHCSR04.cpp" />
     <ClCompile Include="Timer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="LiquidCrystal\keywords.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

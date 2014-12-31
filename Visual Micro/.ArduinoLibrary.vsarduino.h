@@ -38,6 +38,10 @@
             
 typedef unsigned char byte;
 extern "C" void __cxa_pure_virtual() {;}
+
+//
+//
+
 #include "D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino\arduino.h"
 #include "D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Arduino1.ino"
@@ -64,6 +68,10 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\LiquidCrystal_SR2W.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\LiquidCrystal_SR3W.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\LiquidCrystal_SR3W.h"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Mistumi95SP9PUnipolar.cpp"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Mistumi95SP9PUnipolar.h"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.cpp"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Timer.cpp"

@@ -22,7 +22,6 @@ private:
 	int brightness;
 	int fadeAmount;
 	byte maxBrightness;
-	bool isTimePassed;
 public:
 	FadedLed(int pin, int fadeAmount = 5);
 	void On();
