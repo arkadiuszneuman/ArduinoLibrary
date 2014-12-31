@@ -5,7 +5,7 @@ RobotSteeringWheel::RobotSteeringWheel()
 {
 	direction = straight;
 	fullRotation = 48 * 57 * 2;
-	stepper.SetSpeed(250);
+	stepper.SetSpeed(300);
 }
 
 void RobotSteeringWheel::TurnLeft()
