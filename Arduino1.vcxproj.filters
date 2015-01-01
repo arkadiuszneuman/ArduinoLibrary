@@ -69,6 +69,15 @@
     <ClInclude Include="LiquidCrystal_SR3W.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mistumi95SP9PUnipolar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotSteeringWheel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotLCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="led.cpp">
@@ -112,6 +121,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LiquidCrystal_SR3W.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mistumi95SP9PUnipolar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotSteeringWheel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotLCD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

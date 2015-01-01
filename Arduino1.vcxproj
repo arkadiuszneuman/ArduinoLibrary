@@ -86,6 +86,9 @@
     <ClInclude Include="LiquidCrystal_SR.h" />
     <ClInclude Include="LiquidCrystal_SR2W.h" />
     <ClInclude Include="LiquidCrystal_SR3W.h" />
+    <ClInclude Include="Mistumi95SP9PUnipolar.h" />
+    <ClInclude Include="RobotLCD.h" />
+    <ClInclude Include="RobotSteeringWheel.h" />
     <ClInclude Include="SensorHCSR04.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Visual Micro\.Arduino1.vsarduino.h" />
@@ -105,6 +108,9 @@
     <ClCompile Include="LiquidCrystal_SR.cpp" />
     <ClCompile Include="LiquidCrystal_SR2W.cpp" />
     <ClCompile Include="LiquidCrystal_SR3W.cpp" />
+    <ClCompile Include="Mistumi95SP9PUnipolar.cpp" />
+    <ClCompile Include="RobotLCD.cpp" />
+    <ClCompile Include="RobotSteeringWheel.cpp" />
     <ClCompile Include="SensorHCSR04.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>

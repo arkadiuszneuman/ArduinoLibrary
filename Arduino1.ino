@@ -1,3 +1,4 @@
+#include "RobotLCD.h"
 #include "RobotSteeringWheel.h"
 #include "Mistumi95SP9PUnipolar.h"
 #include "Wire.h"
@@ -7,9 +8,11 @@
 #include "FadedLed.h"
 #include "Blinker.h"
 #include "Stepper\Stepper.h"
+#include "SensorHCSR04.h"
+
 //
 //LiquidCrystal_I2C	lcd(0x27, 2, 1, 0, 4, 5, 6, 7); // 0x27 is the I2C bus address for an unmodified backpack
-//
+////
 //void setup()
 //{
 //	// activate LCD module
@@ -100,8 +103,10 @@
 //
 
 RobotSteeringWheel steeringWheel;
+SensorHCSR04 sensor(12, 13);
 
 void setup() {
+	RobotLCD::Init();
 }
 
 //stepper
@@ -111,10 +116,14 @@ void loop(){
 	delay(1000);*/
 	//stepper.step(-STEPS * 20);
 	//delay(500);
-	steeringWheel.TurnLeft();
+
+	int dist = sensor.GetCmDistance();
+	RobotLCD::Write(dist);
 	delay(1000);
-	steeringWheel.TurnStaight();
-	delay(1000);
-	steeringWheel.TurnRight();
-	delay(1000);
+	//steeringWheel.TurnLeft();
+	//delay(1000);
+	//steeringWheel.TurnStaight();
+	//delay(1000);
+	//steeringWheel.TurnRight();
+	//delay(1000);
 }

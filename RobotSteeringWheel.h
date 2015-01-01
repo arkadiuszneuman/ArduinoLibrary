@@ -10,13 +10,14 @@
 #endif
 
 #include "Mistumi95SP9PUnipolar.h"
+#include "RobotLCD.h"
 
 class RobotSteeringWheel
 {
  private:
 	 Mistumi95SP9PUnipolar stepper;
 	 static const byte left = 3, right = 2, straight = 1;
-	 float fullRotation;
+	 static const float fullRotation = Mistumi95SP9PUnipolar::STEPS * 57 * 2;
 	 byte direction;
  public:
 	RobotSteeringWheel();

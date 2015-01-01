@@ -1,15 +1,15 @@
 #include "RobotSteeringWheel.h"
 
 RobotSteeringWheel::RobotSteeringWheel()
-	: stepper(8, 9, 10, 11)
+	: stepper(0, 1, 2, 3)
 {
 	direction = straight;
-	fullRotation = 48 * 57 * 2;
 	stepper.SetSpeed(300);
 }
 
 void RobotSteeringWheel::TurnLeft()
 {
+	RobotLCD::Write("Skrecam w lewo");
 	if (direction == straight)
 	{
 		stepper.Step(-fullRotation / 8);
@@ -23,6 +23,7 @@ void RobotSteeringWheel::TurnLeft()
 
 void RobotSteeringWheel::TurnRight()
 {
+	RobotLCD::Write("Skrecam w prawo");
 	if (direction == straight)
 	{
 		stepper.Step(fullRotation / 8);
@@ -36,6 +37,7 @@ void RobotSteeringWheel::TurnRight()
 
 void RobotSteeringWheel::TurnStaight()
 {
+	RobotLCD::Write("Skrecam prosto");
 	if (direction == left)
 	{
 		stepper.Step(fullRotation / 8);

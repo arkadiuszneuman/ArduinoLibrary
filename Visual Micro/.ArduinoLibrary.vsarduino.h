@@ -70,6 +70,8 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\LiquidCrystal_SR3W.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Mistumi95SP9PUnipolar.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Mistumi95SP9PUnipolar.h"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotLCD.cpp"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotLCD.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.cpp"
