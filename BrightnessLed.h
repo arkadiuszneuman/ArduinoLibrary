@@ -13,9 +13,11 @@ class BrightnessLed
 {
 private:
 	int pin;
+	byte brightness;
 public:
 	BrightnessLed(int pin);
 	void SetBrightness(byte brightness);
+	byte GetBrightness();
 };
 
 

@@ -11,14 +11,18 @@
 
 #include "Led.h"
 #include "RobotLCD.h"
+#include "FadedLed.h"
 
 class RobotMotor
 {
  private:
-	 Led forwardPin, backwardPin;
+	 //Led forwardPin, backwardPin;
+	 BrightnessLed forwardPin, backwardPin;
 	 bool isForward;
 	 bool isStopped;
- public:
+	 void SmoothStop(BrightnessLed& pin);
+	 void SmoothStart(BrightnessLed& pin);
+public:
 	 RobotMotor();
 	 void MoveForward();
 	 void MoveBackward();

@@ -11,37 +11,89 @@ RobotMotor::RobotMotor()
 	isStopped = true;
 }
 
+void RobotMotor::SmoothStop(BrightnessLed& pin)
+{
+	int toChange = 150;
+	int pinBrightness = pin.GetBrightness();
+
+	if (pinBrightness > toChange)
+	{
+		toChange = pinBrightness - toChange;
+	}
+
+	for (int i = 0; i <= toChange; ++i)
+	{
+		pin.SetBrightness(pinBrightness - i);
+		delay(4);
+	}
+	pin.SetBrightness(0);
+}
+
+void RobotMotor::SmoothStart(BrightnessLed& pin)
+{
+	byte toChange = 150;
+	byte pinBrightness =  pin.GetBrightness();
+
+	if (pinBrightness > toChange)
+	{
+		toChange = toChange - (pinBrightness - toChange);
+	}
+
+	pinBrightness = 255 - toChange;
+
+	for (int i = 0; i <= toChange; ++i)
+	{
+		pin.SetBrightness(pinBrightness + i);
+		delay(7);
+	}
+}
+
 void RobotMotor::MoveForward()
 {
 	RobotLCD::Write("Jade w przod");
 
-	backwardPin.Off();
 	if (!isForward && !isStopped)
 	{
-		delay(1000);
+		SmoothStop(backwardPin);
 	}
+
 	isForward = true;
-	forwardPin.On();
+	isStopped = false;
+
+	SmoothStart(forwardPin);
 }
 
 void RobotMotor::MoveBackward()
 {
 	RobotLCD::Write("Jade w tyl");
 
-	forwardPin.Off();
 	if (isForward && !isStopped)
 	{
-		delay(1000);
+		SmoothStop(forwardPin);
 	}
+
 	isForward = false;
-	backwardPin.On();
+	isStopped = false;
+
+	SmoothStart(backwardPin);
 }
 
 void RobotMotor::Stop()
 {
-	RobotLCD::Write("Stop");
+	if (!isStopped)
+	{
+		RobotLCD::Write("Stop");
 
-	forwardPin.Off();
-	backwardPin.Off();
-	isStopped = true;
+
+		if (isForward)
+		{
+			SmoothStop(forwardPin);
+		}
+		else
+		{
+			SmoothStop(backwardPin);
+		}
+
+		isStopped = true;
+	}
 }

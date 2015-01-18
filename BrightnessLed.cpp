@@ -12,5 +12,23 @@ BrightnessLed::BrightnessLed(int pin)
 
 void BrightnessLed::SetBrightness(byte brightness)
 {
-	analogWrite(pin, brightness);
+	this->brightness = brightness;
+
+	if (brightness == 255)
+	{
+		digitalWrite(pin, HIGH);
+	}
+	else if (brightness == 0)
+	{
+		digitalWrite(pin, LOW);
+	}
+	else
+	{
+		analogWrite(pin, brightness);
+	}
+}
+
+byte BrightnessLed::GetBrightness()
+{
+	return brightness;
 }

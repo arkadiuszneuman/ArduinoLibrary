@@ -25,8 +25,6 @@ void FadedLed::Off()
 
 void FadedLed::SetBrightness(byte bright)
 {
-	//timer.Stop();
-
 	this->maxBrightness = bright;
 	if (bright > 0)
 	{
