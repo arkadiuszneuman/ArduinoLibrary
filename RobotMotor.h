@@ -21,11 +21,12 @@ class RobotMotor
 	 bool isForward;
 	 bool isStopped;
 	 void SmoothStop(BrightnessLed& pin);
-	 void SmoothStart(BrightnessLed& pin);
+	 void SmoothStart(BrightnessLed& pin, byte speed);
+	 byte GetSpeedFromPercent(byte percent);
 public:
 	 RobotMotor();
-	 void MoveForward();
-	 void MoveBackward();
+	 void MoveForward(byte percent = 100);
+	 void MoveBackward(byte percent = 100);
 	 void Stop();
 };
 

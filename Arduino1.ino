@@ -137,10 +137,7 @@ void loop(){
 	delay(1000);*/
 
 
-
-
-
-	/*int distance = sensor.GetOneMeasure();
+	int distance = sensor.GetOneMeasure();
 	if (distance > 0)
 	{
 		RobotLCD::Write(distance);
@@ -154,15 +151,7 @@ void loop(){
 		}
 	}
 
-	delay(500);*/
-
-	delay(2000);
-	motor.Stop();
-	delay(5000);
-	motor.MoveBackward();
-	delay(2000);
-	motor.MoveForward();
-	delay(1000);
+	delay(500);
 }
 
 void turnAround()

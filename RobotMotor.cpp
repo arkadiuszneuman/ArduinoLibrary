@@ -13,42 +13,78 @@ RobotMotor::RobotMotor()
 
 void RobotMotor::SmoothStop(BrightnessLed& pin)
 {
-	int toChange = 150;
+	/*int toChange = 170;
 	int pinBrightness = pin.GetBrightness();
 
-	if (pinBrightness > toChange)
+	if (pinBrightness < toChange)
 	{
-		toChange = pinBrightness - toChange;
+		toChange -= pinBrightness;
 	}
 
 	for (int i = 0; i <= toChange; ++i)
 	{
 		pin.SetBrightness(pinBrightness - i);
-		delay(4);
-	}
+		delay(5);
+	}*/
+	SmoothStart(pin, 100);
 	pin.SetBrightness(0);
 }
 
-void RobotMotor::SmoothStart(BrightnessLed& pin)
+void RobotMotor::SmoothStart(BrightnessLed& pin, byte speed)
 {
-	byte toChange = 150;
-	byte pinBrightness =  pin.GetBrightness();
+	byte pinBrightness = pin.GetBrightness();
+	int change = speed - pinBrightness;
+
+	if (change >= 0)
+	{
+		for (int i = 0; i <= change; ++i)
+		{
+			RobotLCD::Write(pinBrightness + i);
+			pin.SetBrightness(pinBrightness + i);
+			delay(7);
+		}
+	}
+	else
+	{
+		
+		for (int i = pinBrightness; i >= pinBrightness + change; --i)
+		{
+			RobotLCD::Write(i);
+			pin.SetBrightness(i);
+			delay(7);
+		}
+	}
+
+	/*byte toChange = speed - 105;
 
 	if (pinBrightness > toChange)
 	{
 		toChange = toChange - (pinBrightness - toChange);
 	}
 
-	pinBrightness = 255 - toChange;
+	pinBrightness = speed - toChange;
 
 	for (int i = 0; i <= toChange; ++i)
 	{
+		RobotLCD::Write(pinBrightness + i);
+
 		pin.SetBrightness(pinBrightness + i);
 		delay(7);
-	}
+	}*/
 }
 
-void RobotMotor::MoveForward()
+byte RobotMotor::GetSpeedFromPercent(byte percent)
+{
+	if (percent == 0)
+	{
+		return 0;
+	}
+
+	int value = (percent * 150) / 100;
+	return (byte)(value + 105);
+}
+
+void RobotMotor::MoveForward(byte percent)
 {
 	RobotLCD::Write("Jade w przod");
 
@@ -60,10 +96,10 @@ void RobotMotor::MoveForward()
 	isForward = true;
 	isStopped = false;
 
-	SmoothStart(forwardPin);
+	SmoothStart(forwardPin, GetSpeedFromPercent(percent));
 }
 
-void RobotMotor::MoveBackward()
+void RobotMotor::MoveBackward(byte percent)
 {
 	RobotLCD::Write("Jade w tyl");
 
@@ -75,7 +111,7 @@ void RobotMotor::MoveBackward()
 	isForward = false;
 	isStopped = false;
 
-	SmoothStart(backwardPin);
+	SmoothStart(backwardPin, GetSpeedFromPercent(percent));
 }
 
 void RobotMotor::Stop()
