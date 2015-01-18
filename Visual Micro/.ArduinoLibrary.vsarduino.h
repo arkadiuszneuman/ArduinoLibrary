@@ -41,6 +41,7 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
+void turnAround();
 
 #include "D:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino\arduino.h"
 #include "D:\Program Files (x86)\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
@@ -72,6 +73,8 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\Mistumi95SP9PUnipolar.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotLCD.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotLCD.h"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotMotor.cpp"
+#include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotMotor.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.cpp"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\RobotSteeringWheel.h"
 #include "D:\Praca\Projekty\Arduino\ArduinoLibrary\SensorHCSR04.cpp"

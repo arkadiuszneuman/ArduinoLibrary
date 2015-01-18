@@ -18,6 +18,7 @@ class RobotSteeringWheel
 	 Mistumi95SP9PUnipolar stepper;
 	 static const byte left = 3, right = 2, straight = 1;
 	 static const float fullRotation = Mistumi95SP9PUnipolar::STEPS * 57 * 2;
+	 static const byte rotateMultipier = 8;
 	 byte direction;
  public:
 	RobotSteeringWheel();

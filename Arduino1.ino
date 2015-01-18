@@ -1,3 +1,4 @@
+#include "RobotMotor.h"
 #include "RobotLCD.h"
 #include "RobotSteeringWheel.h"
 #include "Mistumi95SP9PUnipolar.h"
@@ -9,6 +10,7 @@
 #include "Blinker.h"
 #include "Stepper\Stepper.h"
 #include "SensorHCSR04.h"
+#include "led.h"
 
 //
 //LiquidCrystal_I2C	lcd(0x27, 2, 1, 0, 4, 5, 6, 7); // 0x27 is the I2C bus address for an unmodified backpack
@@ -102,11 +104,13 @@
 //
 //
 
-RobotSteeringWheel steeringWheel;
 SensorHCSR04 sensor(12, 13);
+RobotMotor motor;
+RobotSteeringWheel steeringWheel;
 
 void setup() {
 	RobotLCD::Init();
+	motor.MoveForward();
 }
 
 //stepper
@@ -117,13 +121,51 @@ void loop(){
 	//stepper.step(-STEPS * 20);
 	//delay(500);
 
-	int dist = sensor.GetCmDistance();
-	RobotLCD::Write(dist);
-	delay(1000);
+	
+
 	//steeringWheel.TurnLeft();
 	//delay(1000);
 	//steeringWheel.TurnStaight();
 	//delay(1000);
 	//steeringWheel.TurnRight();
 	//delay(1000);
+
+	/*int dist = sensor.GetCmDistance();
+	RobotLCD::Write(dist);
+	delay(1000);*/
+
+	int distance = sensor.GetOneMeasure();
+	if (distance > 0)
+	{
+		RobotLCD::Write(distance);
+
+		if (distance <= 15)
+		{
+			for (int i = 0; i < 3; ++i)
+			{
+				turnAround();
+			}
+		}
+	}
+
+	delay(500);
+}
+
+void turnAround()
+{
+	int motorDelay = 2000;
+
+	motor.Stop();
+	steeringWheel.TurnLeft();
+	motor.MoveBackward();
+	delay(motorDelay);
+	motor.Stop();
+	steeringWheel.TurnRight();
+	motor.MoveForward();
+	RobotLCD::Write("Prosto przy skrecie");
+	delay(motorDelay + (((float)motorDelay) / 6));
+	motor.Stop();
+	RobotLCD::Write("Prostuje");
+	steeringWheel.TurnStaight();
+	motor.MoveForward();
 }

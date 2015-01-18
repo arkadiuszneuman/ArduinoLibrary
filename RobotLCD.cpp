@@ -20,7 +20,8 @@ void RobotLCD::Init()
 
 void RobotLCD::Write(String txt)
 {
-	secondLine = firstLine;
+	//secondLine =  firstLine;
+	secondLine = "";
 	firstLine = txt;
 
 	lcd.clear();

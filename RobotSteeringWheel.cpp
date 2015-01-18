@@ -12,11 +12,11 @@ void RobotSteeringWheel::TurnLeft()
 	RobotLCD::Write("Skrecam w lewo");
 	if (direction == straight)
 	{
-		stepper.Step(-fullRotation / 8);
+		stepper.Step(-fullRotation / rotateMultipier);
 	}
 	else if (direction == right)
 	{
-		stepper.Step(-fullRotation / 4);
+		stepper.Step(-fullRotation / (rotateMultipier / 2));
 	}
 	direction = left;
 }
@@ -26,11 +26,11 @@ void RobotSteeringWheel::TurnRight()
 	RobotLCD::Write("Skrecam w prawo");
 	if (direction == straight)
 	{
-		stepper.Step(fullRotation / 8);
+		stepper.Step(fullRotation / rotateMultipier);
 	}
 	else if (direction == left)
 	{
-		stepper.Step(fullRotation / 4);
+		stepper.Step(fullRotation / (rotateMultipier / 2));
 	}
 	direction = right;
 }
@@ -40,11 +40,11 @@ void RobotSteeringWheel::TurnStaight()
 	RobotLCD::Write("Skrecam prosto");
 	if (direction == left)
 	{
-		stepper.Step(fullRotation / 8);
+		stepper.Step(fullRotation / rotateMultipier);
 	}
 	else if (direction == right)
 	{
-		stepper.Step(-fullRotation / 8);
+		stepper.Step(-fullRotation / rotateMultipier);
 	}
 	direction = straight;
 }

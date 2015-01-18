@@ -14,8 +14,6 @@ int SensorHCSR04::GetCmDistance()
 	int difference;
 	int distanceOne;
 	int distanceTwo;
-
-
 		do
 		{
 			distanceOne = GetOneMeasure();
@@ -37,7 +35,7 @@ int SensorHCSR04::GetOneMeasure()
 	digitalWrite(triggerPin, HIGH);
 	delayMicroseconds(10); // Added this line
 	digitalWrite(triggerPin, LOW);
-	long duration = pulseIn(echoPin, HIGH, 10000);
+	long duration = pulseIn(echoPin, HIGH, 5000);
 	long distance;
 
 	if (duration > 0)

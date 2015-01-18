@@ -78,6 +78,9 @@
     <ClInclude Include="RobotLCD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RobotMotor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="led.cpp">
@@ -130,6 +133,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RobotLCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotMotor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

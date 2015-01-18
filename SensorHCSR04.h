@@ -15,11 +15,11 @@ class SensorHCSR04
 	 int triggerPin;
 	 int echoPin;
 
-	 int GetOneMeasure();
 
  public:
 	 SensorHCSR04(int triggerPin, int echoPin);
 	 int GetCmDistance();
+	 int GetOneMeasure();
 };
 
 #endif

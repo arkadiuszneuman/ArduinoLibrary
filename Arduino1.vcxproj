@@ -88,6 +88,7 @@
     <ClInclude Include="LiquidCrystal_SR3W.h" />
     <ClInclude Include="Mistumi95SP9PUnipolar.h" />
     <ClInclude Include="RobotLCD.h" />
+    <ClInclude Include="RobotMotor.h" />
     <ClInclude Include="RobotSteeringWheel.h" />
     <ClInclude Include="SensorHCSR04.h" />
     <ClInclude Include="Timer.h" />
@@ -110,6 +111,7 @@
     <ClCompile Include="LiquidCrystal_SR3W.cpp" />
     <ClCompile Include="Mistumi95SP9PUnipolar.cpp" />
     <ClCompile Include="RobotLCD.cpp" />
+    <ClCompile Include="RobotMotor.cpp" />
     <ClCompile Include="RobotSteeringWheel.cpp" />
     <ClCompile Include="SensorHCSR04.cpp" />
     <ClCompile Include="Timer.cpp" />
